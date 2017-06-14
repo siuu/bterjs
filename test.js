@@ -3,14 +3,39 @@
  */
 
 
-let Market=require('./index').Market;
+let Market = require('./index').Market;
+let Trade = require('./index').Trade;
 
+getCnyBalance = () => {
+    const trade = new Trade('','');
+    let amount = 0;
+    console.time('request');
+    Market.getTickers().then(tickerList => {
+        trade.getBalance().then(resp => {
+            console.timeEnd('request');
+            let available = resp.available;
+            for (let key in available) {
+                if (!available.hasOwnProperty(key)) {
+                    continue;
+                }
+                if (key === 'CNY') {
+                    amount += parseFloat(available[key]);
+                    continue;
+                }
+                let tickerKey = (`${key}_cny`).toLowerCase();
+                if (!tickerList.hasOwnProperty(tickerKey)) {
+                    console.error(`Can not find pair ${tickerKey}`);
+                    continue;
+                }
+                amount += parseFloat(tickerList[tickerKey].last) * parseFloat(available[key]);
+            }
+            console.log(amount);
+        }, err => {
+            console.log(err);
+        });
+    }, err => {
+        console.log(err);
+    });
+};
 
-let market=new Market();
-
-
-market.getPairTicker('btc_cny').then(resp=>{
-    console.log(resp)
-},err=>{
-    console.log(err);
-});
+getCnyBalance();

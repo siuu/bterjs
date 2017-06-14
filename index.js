@@ -5,3 +5,4 @@
 'use strict';
 
 module.exports.Market = require('./lib/Market');
+module.exports.Trade = require('./lib/Trade');
