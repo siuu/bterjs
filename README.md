@@ -32,7 +32,6 @@
 - 获取帐号资金余额:`trade.getBalance()`
 - 获取充值地址:`trade.getDepositAddress(currency)`
 - 获取充值提现历史:`trade.getDepositsAndWithdrawalsHistory()`
-
 - 下单交易买入:`trade.orderBuy(currencyPair, rate, amount)`
 - 下单交易卖出:`trade.orderSell(currencyPair, rate, amount)`
 - 取消下单:`trade.cancelOrder(currencyPair, orderNumber)`
