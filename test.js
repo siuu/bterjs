@@ -7,7 +7,7 @@ let Market = require('./index').Market;
 let Trade = require('./index').Trade;
 
 getCnyBalance = () => {
-    const trade = new Trade('','');
+    const trade = new Trade('YOUR_API_KEY', 'YOUR_API_SECRET');
     let amount = 0;
     console.time('request');
     Market.getTickers().then(tickerList => {
