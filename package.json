@@ -1,11 +1,22 @@
 {
-  "name": "node-bter",
-  "version": "1.0.0",
-  "description": "",
+  "name": "bterjs",
+  "version": "0.1.2",
+  "description": "bter.com unofficial library for nodejs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
-  "author": "SiuChuenChih",
-  "license": "ISC"
+  "author": "siu <siuchuenchih@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siuu/bterjs.git"
+  },
+  "keywords": [
+    "bter"
+  ],
+  "bugs": {
+    "url": "https://github.com/siuu/bterjs/issues"
+  },
+  "homepage": "https://github.com/siuu/bterjs#readme"
 }
