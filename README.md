@@ -52,14 +52,15 @@
 
     const Trade=require('bterjs').Trade;
     const Market=require('bterjs').Market;
+    
     const trade = new Trade('YOUR_API_KEY', 'YOUR_API_SECRET');
     let amount = 0;
     console.time('request');
     Market.getTickers().then(tickerList => {
         trade.getBalance().then(resp => {
             console.timeEnd('request');
-            let available = resp.available;
-            for (let key in available) {
+            const available = resp.available;
+            for (const key in available) {
                 if (!available.hasOwnProperty(key)) {
                     continue;
                 }
@@ -67,7 +68,7 @@
                     amount += parseFloat(available[key]);
                     continue;
                 }
-                let tickerKey = (`${key}_cny`).toLowerCase();
+                const tickerKey = (`${key}_cny`).toLowerCase();
                 if (!tickerList.hasOwnProperty(tickerKey)) {
                     console.error(`Can not find pair ${tickerKey}`);
                     continue;
