@@ -13,14 +13,14 @@
     
 [Market](./lib/Market.js)包含的静态方法用于获取交易所行情
 
-- 返回所有系统支持的交易对:`Maket.getPairs()`
-- 交易市场订单参数:`Maket.getMarketInfo()`
-- 交易市场详细行情:`Maket.getMarketList()`
-- 所有交易行情:`Maket.getTickers()`
-- 所有市场深度:`Maket.getOrderBooks()`
-- 根据交易对获取交易行情:`Maket.getPairTicker(pair)`
-- 根据交易对获取市场深度:`Maket.getPairOrderBook(pair)`
-- 根据交易对获取历史成交记录:`Maket.getPairHistory(pair)`
+- 返回所有系统支持的交易对:`Market.getPairs()`
+- 交易市场订单参数:`Market.getMarketInfo()`
+- 交易市场详细行情:`Market.getMarketList()`
+- 所有交易行情:`Market.getTickers()`
+- 所有市场深度:`Market.getOrderBooks()`
+- 根据交易对获取交易行情:`Market.getPairTicker(pair)`
+- 根据交易对获取市场深度:`Market.getPairOrderBook(pair)`
+- 根据交易对获取历史成交记录:`Market.getPairHistory(pair)`
 
 ### Trade
     
