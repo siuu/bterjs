@@ -1,6 +1,6 @@
 {
   "name": "bterjs",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "bter.com unofficial library for nodejs",
   "main": "index.js",
   "scripts": {
